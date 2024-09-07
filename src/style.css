@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('./fonts/FiraMono-Regular.eot');
+  src:
+    url('./fonts/FiraMono-Regular.woff2') format('woff2'),
+    url('./fonts/FiraMono-Regular.woff') format('woff'),
+    url('./fonts/FiraMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('./fonts/FiraMono-Medium.eot');
+  src:
+    url('./fonts/FiraMono-Medium.woff2') format('woff2'),
+    url('./fonts/FiraMono-Medium.woff') format('woff'),
+    url('./fonts/FiraMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('./fonts/FiraMono-Bold.eot');
+  src:
+    url('./fonts/FiraMono-Bold.woff2') format('woff2'),
+    url('./fonts/FiraMono-Bold.woff') format('woff'),
+    url('./fonts/FiraMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --font: 'Fira-Mono', monospace;
+  --background-color: #191919;
+  --text-color: #f1f1f2;
+  --color1: #ff5266;
+  --color2: #00c9a6;
+  --color3: #00d2fc;
+  --color4: #e98164;
+}
+
+.text {
+  font-family: var(--font);
+  font-variant-ligatures: none;
+  font-variation-settings: 'liga' 0;
+  color: var(--text-color);
+  font-size: calc(1rem + 0.5vw);
+}
+
+.delimeter {
+  color: var(--color1);
+  padding: 0 0.5rem;
+}
+
+.list {
+  list-style-type: '! ';
+}
+
+.list-marker::marker {
+  font-weight: bold;
+  color: var(--color1);
+}
+
+.link {
+  color: var(--color3);
+  text-decoration: none;
+  &:hover {
+    color: var(--color2);
+  }
+}
+.base {
+  background-color: var(--background-color);
+  color-scheme: dark;
+  max-width: 80ch;
+  margin-inline: auto;
+  padding: 16px;
+}
+
+.about {
+  display: flex;
+  font-size: 1.2rem;
+  flex-direction: column;
+  justify-content: space-between;
+}

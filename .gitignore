@@ -1,0 +1,4 @@
+.parcel-cache
+node_modules
+_dev
+_build

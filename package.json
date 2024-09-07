@@ -1,0 +1,46 @@
+{
+  "name": "vizqq.cc",
+  "version": "0.0.1",
+  "description": "My personal website",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel --dist-dir _dev",
+    "build": "parcel build --dist-dir _build --no-source-maps --no-content-hash",
+    "predev": "rimraf ./_dev",
+    "prebuild": "rimraf ./_build"
+  },
+  "author": "Radik Islamov <mail@vizqq.cc>",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/config-default": "^2.12.0",
+    "@parcel/transformer-css": "^2.12.0",
+    "parcel": "^2.12.0",
+    "parcel-namer-hashless": "^1.0.6",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1"
+  },
+  "@parcel/transformer-css": {
+    "drafts": {
+      "nesting": true
+    }
+  },
+  "parcel-namer-hashless": {
+    "include": [
+      ".css$",
+      ".webp$",
+      ".eot$",
+      ".ttf$",
+      ".woff$",
+      ".woff2$"
+    ],
+    "mode": "all"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "quoteProps": "consistent",
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
+  "browserslist": "> 1%, last 2 version, not dead"
+}
