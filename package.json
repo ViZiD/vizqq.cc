@@ -16,6 +16,7 @@
     "@parcel/transformer-css": "^2.12.0",
     "parcel": "^2.12.0",
     "parcel-namer-hashless": "^1.0.6",
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1"
   },
@@ -35,6 +36,14 @@
     ],
     "mode": "all"
   },
+  "staticFiles": [
+    {
+      "staticPath": "_headers",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
   "prettier": {
     "arrowParens": "avoid",
     "quoteProps": "consistent",
