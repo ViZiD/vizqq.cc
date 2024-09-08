@@ -77,6 +77,9 @@
 .delimeter {
   color: var(--watermelon);
   padding: 0 0.5rem;
+  @media (prefers-color-scheme: light) {
+    color: var(--carmin);
+  }
 }
 
 .list-contacts {
