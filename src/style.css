@@ -41,19 +41,21 @@
 
 :root {
   --font: 'Fira-Mono', monospace;
-  --background-color: #191919;
-  --text-color: #f1f1f2;
-  --color1: #ff5266;
-  --color2: #00c9a6;
-  --color3: #00d2fc;
-  --color4: #e98164;
+  --black: #191919;
+  --white: #f1f1f2;
+  --watermelon: #ff5266;
+  --carmin: #b33947;
+  --cgreen: #00c9a6;
+  --pgreen: #00a185;
+  --cyan: #00d2fc;
+  --pblue: #00a8ca;
 }
 
 .text {
   font-family: var(--font);
   font-variant-ligatures: none;
   font-variation-settings: 'liga' 0;
-  color: var(--text-color);
+  color: var(--white);
   font-size: 20px;
   @media (min-width: 2200px) {
     font-size: 30px;
@@ -67,10 +69,13 @@
   @media (max-width: 980px) {
     font-size: 16px;
   }
+  @media (prefers-color-scheme: light) {
+    color: var(--black);
+  }
 }
 
 .delimeter {
-  color: var(--color1);
+  color: var(--watermelon);
   padding: 0 0.5rem;
 }
 
@@ -81,22 +86,35 @@
 
 .list-contacts-marker::marker {
   font-weight: bold;
-  color: var(--color1);
+  color: var(--watermelon);
+  @media (prefers-color-scheme: light) {
+    color: var(--carmin);
+  }
 }
 
 .link {
-  color: var(--color3);
+  color: var(--cyan);
   text-decoration: none;
   &:hover {
-    color: var(--color2);
+    color: var(--cgreen);
+    @media (prefers-color-scheme: light) {
+      color: var(--pgreen);
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    color: var(--pblue);
   }
 }
 .base {
-  background-color: var(--background-color);
+  background-color: var(--black);
   color-scheme: dark;
   max-width: 80ch;
   margin-inline: auto;
   padding: 16px;
+  @media (prefers-color-scheme: light) {
+    color-scheme: light;
+    background-color: var(--white);
+  }
 }
 
 .about {
