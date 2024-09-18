@@ -103,11 +103,6 @@
   display: none;
 }
 
-.delimeter {
-  color: var(--color1);
-  padding: 0 0.5rem;
-}
-
 .list-contacts {
   list-style-type: '! ';
   padding: 1rem 3rem;
@@ -131,6 +126,16 @@
   padding: 0.9rem 0;
 }
 
+.about-skills {
+  display: inline-block;
+}
+
+.about-skills > *:not(:last-child)::after {
+  content: '|';
+  color: var(--color1);
+  padding: 0 0.5rem;
+}
+
 .webrings {
   width: fit-content;
   border-top: 2px dashed var(--color1);
@@ -138,5 +143,12 @@
 }
 
 .webring-item {
+  display: inline-block;
   padding-bottom: 0.5rem 0;
+}
+
+.webring-item > *:not(:last-child)::after {
+  content: '|';
+  color: var(--color1);
+  padding: 0 0.5rem;
 }
