@@ -140,7 +140,6 @@
   width: fit-content;
   border-top: 2px dashed var(--watermelon);
   @media (prefers-color-scheme: light) {
-    color: var(--carmin);
     border-top: 2px dashed var(--carmin);
   }
   @media (max-width: 480px) {
