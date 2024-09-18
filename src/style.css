@@ -132,3 +132,18 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.webrings {
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
+  padding-top: 2px;
+  width: fit-content;
+  border-top: 2px dashed var(--watermelon);
+  @media (prefers-color-scheme: light) {
+    color: var(--carmin);
+    border-top: 2px dashed var(--carmin);
+  }
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+}
