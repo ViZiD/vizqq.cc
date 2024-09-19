@@ -27,12 +27,14 @@
   },
   "parcel-namer-hashless": {
     "include": [
-      ".css$",
       ".webp$",
       ".eot$",
       ".ttf$",
       ".woff$",
       ".woff2$"
+    ],
+    "exclude": [
+      ".css$"
     ],
     "mode": "all"
   },
