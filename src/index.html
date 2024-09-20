@@ -13,6 +13,16 @@ SPDX-License-Identifier: MIT
     <link itemprop="url" href="https://vizqq.cc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light" />
+    <meta
+      name="theme-color"
+      content="ivory"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#191919"
+      media="(prefers-color-scheme: dark)"
+    />
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" sizes="192x192" href="./favicon/favicon192.webp" />
     <link rel="apple-touch-icon" href="./favicon/favicon512.webp" />
@@ -66,7 +76,11 @@ SPDX-License-Identifier: MIT
         </li>
         <li class="list-contacts-marker">
           email:
-          <a itemprop="email" class="link" href="mailto:mail@vizqq.cc"
+          <a
+            itemprop="email"
+            rel="nofollow"
+            class="link"
+            href="mailto:mail@vizqq.cc"
             >mail@vizqq.cc</a
           >
         </li>
@@ -74,10 +88,18 @@ SPDX-License-Identifier: MIT
       <footer class="footer">
         <div class="webrings">
           <div class="webring-item">
-            <a class="link" href="https://nixwebr.ing/prev/vizqq">&lt; prev</a
-            ><a class="link" href="https://nixwebr.ing">nixwebr.ing</a
-            ><a class="link" href="https://nixwebr.ing/rand">random</a
-            ><a class="link" href="https://nixwebr.ing/next/vizqq">next &gt;</a>
+            <a class="link" rel="external" href="https://nixwebr.ing/prev/vizqq"
+              >&lt; prev</a
+            ><a class="link" rel="external" href="https://nixwebr.ing"
+              >nixwebr.ing</a
+            ><a class="link" rel="external" href="https://nixwebr.ing/rand"
+              >random</a
+            ><a
+              class="link"
+              rel="external"
+              href="https://nixwebr.ing/next/vizqq"
+              >next &gt;</a
+            >
           </div>
         </div>
       </footer>
