@@ -141,9 +141,12 @@ SPDX-License-Identifier: MIT
   padding: 0 0.5rem;
 }
 
-.webrings {
+.footer {
   width: fit-content;
   border-top: 2px dashed var(--color1);
+}
+
+.webrings {
   padding-top: 0.5rem;
 }
 
