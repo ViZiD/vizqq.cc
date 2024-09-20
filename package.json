@@ -4,7 +4,7 @@
   "description": "My personal website",
   "source": "src/index.html",
   "scripts": {
-    "dev": "parcel --dist-dir _dev",
+    "dev": "parcel --no-cache --dist-dir _dev",
     "build": "parcel build --dist-dir _build --no-source-maps --no-content-hash --no-cache",
     "predev": "rimraf ./_dev",
     "prebuild": "rimraf ./_build"
