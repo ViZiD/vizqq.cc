@@ -1,2 +1,6 @@
 https://vizqq-cc.pages.dev/*
   X-Robots-Tag: noindex
+
+/*.asc
+  Content-Type: text/plain; charset=utf-8
+  Content-Disposition: inline
