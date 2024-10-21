@@ -31,7 +31,8 @@
       ".eot$",
       ".ttf$",
       ".woff$",
-      ".woff2$"
+      ".woff2$",
+      ".asc$"
     ],
     "exclude": [
       ".css$"
