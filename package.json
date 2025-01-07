@@ -27,11 +27,6 @@
   },
   "parcel-namer-hashless": {
     "include": [
-      ".webp$",
-      ".eot$",
-      ".ttf$",
-      ".woff$",
-      ".woff2$",
       ".asc$"
     ],
     "exclude": [
