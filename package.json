@@ -12,12 +12,12 @@
   "author": "Radik Islamov <mail@vizqq.cc>",
   "license": "MIT",
   "devDependencies": {
-    "@parcel/config-default": "^2.12.0",
-    "@parcel/transformer-css": "^2.12.0",
-    "parcel": "^2.12.0",
-    "parcel-namer-hashless": "^1.0.6",
+    "@parcel/config-default": "^2.13.3",
+    "@parcel/transformer-css": "^2.13.3",
+    "parcel": "^2.13.3",
+    "parcel-namer-hashless": "^1.0.7",
     "parcel-reporter-static-files-copy": "^1.5.3",
-    "prettier": "^3.3.3",
+    "prettier": "^3.5.3",
     "rimraf": "^6.0.1"
   },
   "@parcel/transformer-css": {
