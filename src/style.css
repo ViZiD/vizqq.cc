@@ -5,36 +5,8 @@ SPDX-License-Identifier: MIT
 
 @font-face {
   font-family: 'Fira Mono';
-  src: url('./fonts/FiraMono-Regular.eot');
-  src:
-    url('./fonts/FiraMono-Regular.woff2') format('woff2'),
-    url('./fonts/FiraMono-Regular.woff') format('woff'),
-    url('./fonts/FiraMono-Regular.ttf') format('truetype');
+  src: url('./fonts/FiraMono-Regular.woff2') format('woff2');
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Fira Mono';
-  src: url('./fonts/FiraMono-Medium.eot');
-  src:
-    url('./fonts/FiraMono-Medium.woff2') format('woff2'),
-    url('./fonts/FiraMono-Medium.woff') format('woff'),
-    url('./fonts/FiraMono-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Fira Mono';
-  src: url('./fonts/FiraMono-Bold.eot');
-  src:
-    url('./fonts/FiraMono-Bold.woff2') format('woff2'),
-    url('./fonts/FiraMono-Bold.woff') format('woff'),
-    url('./fonts/FiraMono-Bold.ttf') format('truetype');
-  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -42,13 +14,13 @@ SPDX-License-Identifier: MIT
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-  padding: 0;
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 :root {
-  --font: 'Fira-Mono', monospace;
+  --font: 'Fira Mono', monospace;
   --black: #191919;
   --white: ivory;
   --watermelon: #ff5266;
@@ -63,6 +35,17 @@ SPDX-License-Identifier: MIT
   --color1: var(--watermelon);
   --color2: var(--cyan);
   --color3: var(--cgreen);
+  --avatar-bg: #242424;
+
+  --font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.5rem);
+  --line-height: 1.5;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --page-pad: clamp(1rem, 4vw, 2rem);
+  --content-pad: clamp(1rem, 6vw, 3rem);
+  --avatar-size: 72px;
 
   @media (prefers-color-scheme: light) {
     --text-color: var(--black);
@@ -70,55 +53,79 @@ SPDX-License-Identifier: MIT
     --color1: var(--carmin);
     --color2: var(--pblue);
     --color3: var(--pgreen);
+    --avatar-bg: #f0f0dc;
   }
 }
 
 .base {
   background-color: var(--background-color);
-  color-scheme: dark;
-  max-width: 80ch;
+  color-scheme: light dark;
+  max-width: calc(80ch + 2 * var(--page-pad));
   margin-inline: auto;
-  padding: 16px;
+  padding: var(--page-pad);
   font-family: var(--font);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   font-variant-ligatures: none;
-  font-variation-settings: 'liga' 0;
   color: var(--text-color);
-  font-size: 20px;
+}
 
-  @media (min-width: 2200px) {
-    font-size: 30px;
-  }
+.masthead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-block-end: var(--space-md);
+}
 
-  @media (max-width: 1399px) {
-    font-size: 16px;
-  }
+.avatar {
+  flex: none;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--avatar-bg);
+}
 
-  @media (max-width: 1119px) {
-    font-size: 14px;
-  }
-
-  @media (max-width: 980px) {
-    font-size: 16px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.9rem;
-  }
+.masthead-text {
+  min-width: 0;
 }
 
 .identity {
   font-size: 2rem;
   font-weight: 400;
+  line-height: 1.15;
 }
 
 .hidden {
   display: none;
 }
 
+.about-skills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-block-start: var(--space-2xs);
+}
+
+.about-skills > span {
+  white-space: nowrap;
+}
+
+.about-skills > span + span::before {
+  content: '|';
+  color: var(--color1);
+  padding: 0 var(--space-xs);
+}
+
 .list-contacts {
   list-style-type: '! ';
-  padding: 1rem 3rem;
+  padding: var(--space-sm) var(--content-pad);
   font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.list-contacts-marker + .list-contacts-marker {
+  margin-block-start: var(--space-2xs);
 }
 
 .list-contacts-marker::marker {
@@ -129,32 +136,37 @@ SPDX-License-Identifier: MIT
 .link {
   color: var(--color2);
   text-decoration: none;
+  transition: color 0.15s ease;
 
   &:hover {
     color: var(--color3);
   }
+
+  &:focus-visible {
+    outline: 2px solid var(--color2);
+    outline-offset: 4px;
+  }
 }
 
-.about {
-  padding: 0.9rem 0;
-}
-
-.about-skills {
-  display: inline-block;
-}
-
-.about-skills>*:not(:last-child)::after {
-  content: '|';
-  color: var(--color1);
-  padding: 0 0.5rem;
+::selection {
+  background-color: var(--color1);
+  color: var(--background-color);
 }
 
 .footer {
   width: fit-content;
+  margin-block-start: var(--space-sm);
   border-top: 2px dashed var(--color1);
 }
 
 .footer-dummy {
-  padding: 0.5rem 3rem 0.5rem 3rem;
-  color: var(--text-color);
+  padding: var(--space-xs) var(--content-pad);
+}
+
+@media (max-width: 480px) {
+  .masthead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
 }
