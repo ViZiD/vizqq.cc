@@ -57,7 +57,7 @@ SPDX-License-Identifier: MIT
   }
 }
 
-.base {
+.page {
   background-color: var(--background-color);
   color-scheme: light dark;
   max-width: calc(80ch + 2 * var(--page-pad));
@@ -77,7 +77,7 @@ SPDX-License-Identifier: MIT
   margin-block-end: var(--space-md);
 }
 
-.avatar {
+.masthead__avatar {
   flex: none;
   width: var(--avatar-size);
   height: var(--avatar-size);
@@ -86,49 +86,49 @@ SPDX-License-Identifier: MIT
   background-color: var(--avatar-bg);
 }
 
-.masthead-text {
+.masthead__text {
   min-width: 0;
 }
 
-.identity {
+.masthead__title {
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.15;
 }
 
-.hidden {
+.metadata {
   display: none;
 }
 
-.about-skills {
+.masthead__meta {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   margin-block-start: var(--space-2xs);
 }
 
-.about-skills > span {
+.masthead__meta > span {
   white-space: nowrap;
 }
 
-.about-skills > span + span::before {
+.masthead__meta > span + span::before {
   content: '|';
   color: var(--color1);
   padding: 0 var(--space-xs);
 }
 
-.list-contacts {
+.contacts {
   list-style-type: '! ';
   padding: var(--space-sm) var(--content-pad);
   font-size: 1.2rem;
   line-height: 1.6;
 }
 
-.list-contacts-marker + .list-contacts-marker {
+.contacts__item + .contacts__item {
   margin-block-start: var(--space-2xs);
 }
 
-.list-contacts-marker::marker {
+.contacts__item::marker {
   font-weight: 400;
   color: var(--color1);
 }
@@ -159,7 +159,7 @@ SPDX-License-Identifier: MIT
   border-top: 2px dashed var(--color1);
 }
 
-.footer-dummy {
+.footer__note {
   padding: var(--space-xs) var(--content-pad);
 }
 

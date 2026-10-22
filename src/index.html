@@ -4,7 +4,7 @@ SPDX-License-Identifier: MIT
 -->
 
 <!doctype html>
-<html class="base" lang="en" itemtype="https://schema.org/Person" itemscope>
+<html class="page" lang="en" itemtype="https://schema.org/Person" itemscope>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Contacts of Radik Islamov" />
@@ -63,7 +63,7 @@ SPDX-License-Identifier: MIT
     <main>
       <header class="masthead">
         <img
-          class="avatar"
+          class="masthead__avatar"
           src="./assets/avatar.webp"
           alt="Radik Islamov"
           width="72"
@@ -71,22 +71,22 @@ SPDX-License-Identifier: MIT
           itemprop="image"
           decoding="async"
         />
-        <div class="masthead-text">
-          <h1 class="identity">
+        <div class="masthead__text">
+          <h1 class="masthead__title">
             <span itemprop="givenName">Radik</span>
             <span itemprop="familyName">Islamov</span>
           </h1>
-          <span class="hidden" itemprop="alternateName">vizqq</span
-          ><span class="hidden" itemprop="alternateName">ViZiD</span>
-          <div class="about-skills">
+          <span class="metadata" itemprop="alternateName">vizqq</span
+          ><span class="metadata" itemprop="alternateName">ViZiD</span>
+          <div class="masthead__meta">
             <span>python</span><span>js</span><span>txt</span
             ><span>json developer</span>
           </div>
         </div>
       </header>
       <a href="./vizqq.asc" class="link">PGP 0DAC 8422 BE2A 427D</a>
-      <ul class="list-contacts">
-        <li class="list-contacts-marker">
+      <ul class="contacts">
+        <li class="contacts__item">
           github:
           <a
             itemprop="sameAs"
@@ -96,13 +96,13 @@ SPDX-License-Identifier: MIT
             >ViZiD</a
           >
         </li>
-        <li class="list-contacts-marker">
+        <li class="contacts__item">
           telegram:
           <a itemprop="sameAs" rel="me" class="link" href="https://t.me/ViZiD"
             >@ViZiD</a
           >
         </li>
-        <li class="list-contacts-marker">
+        <li class="contacts__item">
           email:
           <a
             itemprop="email"
@@ -114,7 +114,7 @@ SPDX-License-Identifier: MIT
         </li>
       </ul>
       <footer class="footer">
-        <div class="footer-dummy">Your ad could be here</div>
+        <div class="footer__note">Your ad could be here</div>
       </footer>
     </main>
   </body>
