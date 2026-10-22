@@ -4,8 +4,8 @@
   "description": "My personal website",
   "source": "src/index.html",
   "scripts": {
-    "dev": "parcel --no-cache --dist-dir _dev",
-    "build": "parcel build --dist-dir _build --no-source-maps --no-content-hash --no-cache",
+    "dev": "parcel src/index.html src/404.html --no-cache --dist-dir _dev",
+    "build": "parcel build src/index.html src/404.html --dist-dir _build --no-source-maps --no-content-hash --no-cache",
     "predev": "rimraf ./_dev",
     "prebuild": "rimraf ./_build"
   },
@@ -13,7 +13,9 @@
   "license": "MIT",
   "devDependencies": {
     "@parcel/config-default": "^2.16.4",
+    "@parcel/packager-raw-url": "2.16.4",
     "@parcel/transformer-css": "^2.16.4",
+    "@parcel/transformer-jsonld": "2.16.4",
     "parcel": "^2.16.4",
     "parcel-namer-hashless": "^1.0.7",
     "parcel-reporter-static-files-copy": "^1.5.3",
